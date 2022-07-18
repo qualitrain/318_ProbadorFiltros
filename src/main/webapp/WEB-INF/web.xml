@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>ProbadorFiltros_318</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+  <filter>
+    <display-name>FiltroEncabezadoYPie</display-name>
+    <filter-name>FiltroEncabezadoYPie</filter-name>
+    <filter-class>qtx.filtros.FiltroEncabezadoYPie</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>FiltroEncabezadoYPie</filter-name>
+    <url-pattern>/servlet/*</url-pattern>
+  </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>MensajeServlet</display-name>
+    <servlet-name>MensajeServlet</servlet-name>
+    <servlet-class>qtx.servlets.MensajeServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>MensajeServlet</servlet-name>
+    <url-pattern>/servlet/MensajeServlet</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>FiltroBarraRoja</display-name>
+    <filter-name>FiltroBarraRoja</filter-name>
+    <filter-class>qtx.filtros.FiltroBarraRoja</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>FiltroBarraRoja</filter-name>
+    <url-pattern>/servlet/*</url-pattern>
+  </filter-mapping>
+  <filter>
+    <display-name>FiltroBarraAzul</display-name>
+    <filter-name>FiltroBarraAzul</filter-name>
+    <filter-class>qtx.filtros.FiltroBarraAzul</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>FiltroBarraAzul</filter-name>
+    <url-pattern>/servlet/*</url-pattern>
+  </filter-mapping>
+</web-app>
